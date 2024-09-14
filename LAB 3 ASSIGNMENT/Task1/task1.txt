@@ -1,0 +1,9 @@
+Task no. 1
+
+Reason : 
+	The reason for the wrong value being dispalyed as output is that int has a fixed storage size of 32bit/2bytes and the input that is
+	given exceeds the storage limit of int datatype , that is why the system gave a different output .
+
+	The maximum value that int data type can store is 2,147,483,647.
+
+  	This issue can be fixed by using unsigned integer,floats or doubles, which can store larger values. 
