@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "mah.C": "cpp",
+        "extra.C": "cpp",
+        "multiply.C": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
