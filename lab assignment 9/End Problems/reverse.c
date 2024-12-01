@@ -1,6 +1,25 @@
 #include <stdio.h>
 #include <string.h>
 
+// First way
+void reversedStringTemp(char str[])
+{
+    int length = strlen(str);
+    int start = 0;
+    int end = length - 1;
+    char temp;
+
+    while (start < end)
+    {
+        temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
+        start++;
+        end--;
+    }
+}
+
+// Second way
 void reversedString(char str[])
 {
     int length = strlen(str);
