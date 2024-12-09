@@ -5,7 +5,7 @@
 struct Student
 {
     char name[50];
-    int marks;
+    float marks;
 };
 
 int main()
@@ -17,7 +17,9 @@ int main()
     scanf("%d", &n);
 
     // Dynamically allocate memory for students
-    struct Student *students = (struct Student *)malloc(n * sizeof(struct Student));
+
+    struct Student *students;
+    students = (struct Student *)malloc(n * sizeof(struct Student));
 
     if (students == NULL)
     {
@@ -30,14 +32,21 @@ int main()
     {
         printf("\nEnter details for student %d\n", i + 1);
         printf("Name: ");
-        scanf(" %[^\n]", students[i].name);
+        scanf(" %[^\n]", students[i].name); //" %[^\n]" is a special type of specifier for Strings with spaces
         printf("Marks: ");
-        scanf("%d", &students[i].marks);
+        scanf("%f", &students[i].marks);
+
         average += students[i].marks;
     }
 
     // Calculate average marks
     average /= n;
+
+    printf("\nStudent Details:\n");
+    for (i = 0; i < n; i++)
+    {
+        printf("Name: %s, Marks: %.2f\n", students[i].name, students[i].marks);
+    }
 
     printf("\nAverage Marks: %.2f\n", average);
 
